@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 15px;
+	/* padding: 0 15px; */
 }
 .section--hero {
 	border-bottom: 1px solid #D4D4D4;
@@ -329,6 +329,15 @@ td {
 	font-weight: 900;
 	color: #363636;
 }
+.card {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin-bottom: 35px;
+	justify-content: space-between;
+}
 .card__inner {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -337,13 +346,8 @@ td {
 	display: flex;
 	align-items: center;
 }
-.card {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	margin-bottom: 35px;
+.card__item {
+	width: 276px;
 }
 .img--card {
 	border-radius: 50%;
@@ -365,25 +369,6 @@ td {
 	font-size: 16px;
 	line-height: 19px;
 	color: #A5A5A5;
-}
-.card__item--1 {
-	margin-right: 87px;
-}
-.card__item--2 {
-	margin-right: 66px;
-}
-.card__item--3 {
-	margin-right: 99px;
-}
-.card__item--4 {
-	margin-right: 46px;
-}
-.card__item--5 {
-	margin-right: 70px;
-}
-.card__item--6 {
-	margin-right: 75px;
-	margin-bottom: 65px;
 }
 
 /*section--news*/
@@ -443,6 +428,12 @@ td {
 	height: 21px;
 }
 @media screen and (max-width: 660px) {
+	.container {
+		width: 100%;
+		max-width: 321px;
+		margin: 0 auto;
+		/* padding: 0 15px; */
+	}
 	.navigation {
 		display: none;
 	}
@@ -532,21 +523,34 @@ td {
 	}
 
 	.section--news {
-		padding-top: 53px;
+		padding-top: 70px;
+		padding-bottom: 100px;
+		background-color: #F3F3F3;
+		height: 326px;
 	}
 	.news__title {
 		padding-bottom: 40px;
 	}
 	.news {
 		width: 315px;
+		position: relative;
 		margin: 0 auto;
 		align-items: center;
 	}
 	.new__item {
 		width: 260px;
+		position: absolute;
+		left: 0;
+		height: 154px;
+		top: 0px;
 	}
 	.news__arrow--right {
 		display: block;
+		width: 25px;
+		height: 21px;
+		position: absolute;
+		right: 10px;
+		top: 70px;
 	}
 	.section--author {
 		margin-bottom: 35px;
@@ -608,4 +612,7 @@ td {
 
 .flex-block {
 	display: flex;
+}
+.none {
+	display: none;
 }
